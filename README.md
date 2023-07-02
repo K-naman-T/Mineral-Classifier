@@ -1,4 +1,3 @@
-
 # Mineral Classifier
 
 The Mineral Classifier is a Python program that uses Convolutional Neural Networks (CNNs) to classify images of minerals into different classes. It utilizes the PyTorch library for deep learning and image processing tasks.
