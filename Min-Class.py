@@ -39,7 +39,7 @@ class MineralDataset(Dataset):
         return image, label
 
 # Loading and preprocessng the dataset
-dataset_dir = 'C:\\Users\\Oiiis\\Desktop\\mining-py\\minet'  # Parent directory containing the mineral directories
+dataset_dir = 'dataset-directory'  # Parent directory containing the mineral directories
 mineral_labels = os.listdir(dataset_dir)  # List of mineral labels
 
 images = []
