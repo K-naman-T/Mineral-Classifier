@@ -30,15 +30,11 @@ To run the Mineral Classifier, you need to have the following dependencies insta
 
     Set the appropriate dataset directory in the code:
 
-    python
-
-dataset_dir = '<path_to_dataset_directory>'
+    dataset_dir = '<path_to_dataset_directory>'
 
 Run the program:
 
-shell
-
-    python mineral_classifier.py
+      python mineral_classifier.py
 
     The program will load and preprocess the dataset, train the CNN model, and evaluate its performance. The accuracy and classification report will be displayed in the console.
 
@@ -74,8 +70,5 @@ Acknowledgments
 
     This project is inspired by the need for accurate mineral classification in the field of mining and geology.
     The code structure and implementation are based on best practices and references to PyTorch and computer vision documentation.
-
-javascript
-
 
 Please make sure to update the placeholders, such as `<path_t
