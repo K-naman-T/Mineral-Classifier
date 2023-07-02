@@ -8,7 +8,7 @@ from torch.utils.data import DataLoader, Dataset
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import classification_report, accuracy_score
 
-# Define the CNN model
+# Defining the CNN model
 class MineralClassifier(nn.Module):
     def __init__(self):
         super(MineralClassifier, self).__init__()
@@ -24,7 +24,7 @@ class MineralClassifier(nn.Module):
         x = self.fc2(x)
         return x
 
-# Define the custom dataset class
+# Defining the custom dataset class
 class MineralDataset(Dataset):
     def __init__(self, images, labels):
         self.images = images
@@ -38,7 +38,7 @@ class MineralDataset(Dataset):
         label = self.labels[idx]
         return image, label
 
-# Load and preprocess the dataset
+# Loading and preprocessng the dataset
 dataset_dir = 'C:\\Users\\Oiiis\\Desktop\\mining-py\\minet'  # Parent directory containing the mineral directories
 mineral_labels = os.listdir(dataset_dir)  # List of mineral labels
 
@@ -65,31 +65,31 @@ for label_idx, mineral_label in enumerate(mineral_labels):
     else:
         print(f"Invalid directory: {label_dir}")
 
-# Convert the image and label lists to NumPy arrays
+# Converting the image and label lists to NumPy arrays
 images = np.array(images)
 labels = np.array(labels)
 
-# Split the dataset into training and testing sets
+# Splitting the dataset into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(images, labels, test_size=0.2, random_state=42)
 
-# Convert the data to PyTorch tensors
+# Converting the data to PyTorch tensors
 X_train = torch.tensor(X_train.transpose((0, 3, 1, 2)), dtype=torch.float32)
 X_test = torch.tensor(X_test.transpose((0, 3, 1, 2)), dtype=torch.float32)
 y_train = torch.tensor(y_train, dtype=torch.long)
 y_test = torch.tensor(y_test, dtype=torch.long)
 
-# Create data loaders for training and testing sets
+# Creating data loaders for training and testing sets
 train_dataset = MineralDataset(X_train, y_train)
 test_dataset = MineralDataset(X_test, y_test)
 train_loader = DataLoader(train_dataset, batch_size=32, shuffle=True)
 test_loader = DataLoader(test_dataset, batch_size=32, shuffle=False)
 
-# Create the model and optimizer
+# Creating the model and optimizer
 model = MineralClassifier()
 criterion = nn.CrossEntropyLoss()
 optimizer = optim.Adam(model.parameters(), lr=0.001)
 
-# Train the model
+# Training the model
 num_epochs = 10
 for epoch in range(num_epochs):
     model.train()
@@ -100,7 +100,7 @@ for epoch in range(num_epochs):
         loss.backward()
         optimizer.step()
 
-# Evaluate the model
+# Evaluating the model
 model.eval()
 test_predictions = []
 with torch.no_grad():
