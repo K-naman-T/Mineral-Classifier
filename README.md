@@ -27,7 +27,7 @@ The following libraries are required to run this program:
 
 ## Detailed Description:
 
-1. **Dataset Loading and Preproccessing**
+1.**Dataset Loading and Preproccessing**
 
 The dataset used for this task is a collection of mineral images, which are classified into 7 different categories:
 
@@ -63,7 +63,7 @@ The image data arrays are converted to PyTorch tensors, and the channel dimensio
 
 PyTorch's DataLoader is used to divide the data into batches and to shuffle the data. Separate loaders are created for the training and testing sets.
 
-5. **Model**
+5.**Model**
 
 The model used is a Convolutional Neural Network (CNN) defined by the MineralClassifier class. The CNN is a popular deep learning model used for image recognition tasks due to its ability to capture spatial dependencies in an image through the application of relevant filters.
 
@@ -77,7 +77,7 @@ Two fully connected layers (self.fc1 and self.fc2), which perform classification
 
 The ReLU (Rectified Linear Unit) activation function is used in this model, which introduces non-linearity into the model allowing it to learn complex patterns.
 
-(i) ***Loss Function***
+(i) *Loss Function*
 
 The CrossEntropyLoss function is used as the loss function in this model. This is a common choice for classification problems, and especially so for multi-class classification like this one. Cross-Entropy Loss measures the performance of a classification model whose output is a probability value between 0 and 1. It increases as the predicted probability diverges from the actual label, providing a strong gradient for correct classification.
 
@@ -89,7 +89,7 @@ The Adam (Adaptive Moment Estimation) optimizer is used for training the model. 
 
 The model is trained over a specified number of epochs. In each epoch, the model's gradients are reset, a forward pass is performed on the training data, the loss between the output and actual labels is computed, backpropagation is performed to compute the gradients, and the optimizer updates the model's weights.
 
-7. **Evaluating the Model
+7. **Evaluating the Model**
 
 After training, the model is evaluated on the test data. The model's '.eval()' method is called to set it to evaluation mode, which turns off features like dropout. Predictions are made on the test data, and the accuracy of the model is computed and printed.
 
