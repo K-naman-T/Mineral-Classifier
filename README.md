@@ -77,13 +77,13 @@ Two fully connected layers (self.fc1 and self.fc2), which perform classification
 
 The ReLU (Rectified Linear Unit) activation function is used in this model, which introduces non-linearity into the model allowing it to learn complex patterns.
 
-	(i) ***Loss Function***
+(i) ***Loss Function***
 
-		The CrossEntropyLoss function is used as the loss function in this model. This is a common choice for classification problems, and especially so for multi-class classification like this one. Cross-Entropy Loss measures the performance of a classification model whose output is a probability value between 0 and 1. It increases as the predicted probability diverges from the actual label, providing a strong gradient for correct classification.
+The CrossEntropyLoss function is used as the loss function in this model. This is a common choice for classification problems, and especially so for multi-class classification like this one. Cross-Entropy Loss measures the performance of a classification model whose output is a probability value between 0 and 1. It increases as the predicted probability diverges from the actual label, providing a strong gradient for correct classification.
 
-	(ii) ***Optimization Technique***
+(ii) *Optimization Technique*
 
-		The Adam (Adaptive Moment Estimation) optimizer is used for training the model. Adam is an extension to stochastic gradient descent that has recently seen broader adoption for deep learning applications in computer vision and natural language processing. It's known for its efficiency and effective handling of sparse gradients, as well as keeping an exponentially decaying average of past gradients.
+The Adam (Adaptive Moment Estimation) optimizer is used for training the model. Adam is an extension to stochastic gradient descent that has recently seen broader adoption for deep learning applications in computer vision and natural language processing. It's known for its efficiency and effective handling of sparse gradients, as well as keeping an exponentially decaying average of past gradients.
 
 6. **Training the Model**
 
