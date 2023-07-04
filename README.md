@@ -85,11 +85,11 @@ The CrossEntropyLoss function is used as the loss function in this model. This i
 
 The Adam (Adaptive Moment Estimation) optimizer is used for training the model. Adam is an extension to stochastic gradient descent that has recently seen broader adoption for deep learning applications in computer vision and natural language processing. It's known for its efficiency and effective handling of sparse gradients, as well as keeping an exponentially decaying average of past gradients.
 
-6. **Training the Model**
+6.**Training the Model**
 
 The model is trained over a specified number of epochs. In each epoch, the model's gradients are reset, a forward pass is performed on the training data, the loss between the output and actual labels is computed, backpropagation is performed to compute the gradients, and the optimizer updates the model's weights.
 
-7. **Evaluating the Model**
+7.**Evaluating the Model**
 
 After training, the model is evaluated on the test data. The model's '.eval()' method is called to set it to evaluation mode, which turns off features like dropout. Predictions are made on the test data, and the accuracy of the model is computed and printed.
 
